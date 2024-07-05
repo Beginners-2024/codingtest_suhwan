@@ -63,7 +63,7 @@ public class 그림_1926 {
 
         int size = 0;
 
-        //처음 그림 시작 값을 방문한 것으로 처리해야, dfs 돌때 다시 방문하지 않음
+        //처음 그림 시작 값을 방문한 것으로 처리해야, bfs 돌때 다시 방문하지 않음
         visited[p.y][p.x] = true;
         while (!q.isEmpty()) {
             Pos pos = q.poll();
