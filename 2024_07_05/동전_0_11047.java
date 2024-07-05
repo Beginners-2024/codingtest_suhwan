@@ -3,9 +3,10 @@ package backJoon;
 import java.io.*;
 import java.util.*;
 
-public class 동전_0 {
+public class 동전_0_11047 {
     static int N;
     static int K;
+    // 동전 지갑
     static List<Integer> wallet;
 
     public static void main(String[] args) throws IOException {
@@ -23,10 +24,12 @@ public class 동전_0 {
             wallet.add(Integer.parseInt(st.nextToken()));
         }
 
+        // 동전의 가격이 높은 순으로 내림차순 정렬
         wallet.sort((o1, o2) -> o2 - o1);
 
         int answer = 0;
 
+        //가격보다 값이 작고, 그중 가장 큰 동전을 최대로 사용
         for (Integer coin : wallet) {
             if (K == 0) {
                 break;

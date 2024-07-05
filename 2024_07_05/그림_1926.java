@@ -10,6 +10,7 @@ public class 그림_1926 {
     static boolean[][] visited;
     static int[] dy = {1, -1, 0, 0};
     static int[] dx = {0, 0, 1, -1};
+    //그림의 첫 시작 '1'을 사용하기 위한 class, 개인적으로 int[] 배열 보다는 사용하기 편해서 주로 이용
     static class Pos {
         int y;
         int x;
@@ -42,6 +43,7 @@ public class 그림_1926 {
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
                 if (board[i][j] == 1 && !visited[i][j]) {
+                    // 방문하지 않았고, 좌표 값아 '1'인 경우 그림이 시작하는 (i, j) 값으로 그림의 크기를 구함
                     bfs(new Pos(i, j));
                 }
             }
@@ -60,9 +62,12 @@ public class 그림_1926 {
         q.add(p);
 
         int size = 0;
+
+        //처음 그림 시작 값을 방문한 것으로 처리해야, dfs 돌때 다시 방문하지 않음
         visited[p.y][p.x] = true;
         while (!q.isEmpty()) {
             Pos pos = q.poll();
+            //그림의 부분이기에 크기를 하나씩 늘려감
             size += 1;
             for (int d = 0; d < 4; d++) {
                 int py = pos.y + dy[d];
@@ -74,10 +79,12 @@ public class 그림_1926 {
                 }
             }
         }
+        //그림의 부분을 다 찾았기에, 그림 개수++, 최대 그림 크기를 갱신
         pictureCount++;
         widestPicture = Math.max(widestPicture, size);
     }
 
+    //board의 범위안에 들어오는지를 함수로 뺴서 쓰는게 더 편함
     private static boolean isInRange(int y, int x) {
         return (y >= 0 && y < N) && (x >= 0 && x < M);
     }
