@@ -1,5 +1,3 @@
-package backJoon;
-
 import java.io.*;
 import java.util.*;
 
