@@ -57,6 +57,18 @@ index 5까지의 합 24, index 3까지의 합 9
 즉, 24 - 6 = 18이 된다
 이 방식으로 S >= 부분 합 이 될때, 최솟값의 길이를 구한다.
 
+### pseudo code
+```java
+while (i < N + 1 && j < N + 1) {
+    if (prefix[i] - prefix[j - 1] < S) {
+        i++;
+        continue;
+    }
+    answer = Math.min(answer, i - j + 1);
+    j++;
+    i = j;
+}
+```
 ### 메모리 및 시간
 - 24412kb
 - 828ms
