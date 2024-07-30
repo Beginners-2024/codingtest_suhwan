@@ -36,7 +36,6 @@ public class 트럭_13335 {
         while(!bridge.isEmpty()) {
             time += 1;
             bridgeWeight -= bridge.poll();
-            System.out.println("time : " + time + ", bridge weight : " + bridgeWeight);
             if (!truck.isEmpty()) {
                 int truckWeight = truck.peek();
                 if (truckWeight + bridgeWeight <= L) {
@@ -46,7 +45,6 @@ public class 트럭_13335 {
                     bridge.add(0);
                 }
             }
-            System.out.println(bridge);
         }
 
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
