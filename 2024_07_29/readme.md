@@ -87,6 +87,20 @@ bfs를 사용하여, 자신보다 무거운 구슬의 갯수, 가벼운 구슬�
 그 값들이 N / 2 + 1 보다 클 경우 중간 구슬이 될 수 없기 때문에, 정답을 ++ 한다
 글고 출력 끝
 
+### psuedo code
+```java
+while (!q.isEmpty()) {
+    int curr = q.poll();
+    for (int value : list[curr]) {
+        if (!visited[value]) {
+            visited[value] = true;
+            q.add(value);
+            res++;
+        }
+    }
+}
+return res;
+```
 ### 메모리 및 시간
 - 17192kb
 - 212ms
