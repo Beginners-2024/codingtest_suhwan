@@ -52,7 +52,6 @@ public class ListOfUniqueNumbers_13144 {
 
         while (l < N) {
             while (r < N && cnt[nums[r]] == 0) {
-                System.out.println(r);
                 cnt[nums[r]] += 1;
                 r++;
             }
