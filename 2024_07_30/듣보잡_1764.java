@@ -1,7 +1,6 @@
 package backJoon;
 
 import java.io.*;
-import java.nio.Buffer;
 import java.util.*;
 
 public class 듣보잡_1764 {
