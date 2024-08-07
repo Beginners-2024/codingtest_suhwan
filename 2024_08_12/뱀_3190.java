@@ -66,7 +66,7 @@ public class 뱀_3190 {
             time++;
 
             int ny = y + dy[dir];
-            int nx = x  +dx[dir];
+            int nx = x + dx[dir];
 
             if (ny < 0 || ny >= N || nx < 0 || nx >= N) {
                 return ;
