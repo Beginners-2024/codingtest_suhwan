@@ -31,7 +31,7 @@ public class 멀티탭_스케줄링_1700 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         bw.write(new StringBuilder().append(ans).toString());
         bw.close();
-        br.close();
+        br.close();#
     }
 
     private static void solve() {
