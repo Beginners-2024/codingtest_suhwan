@@ -1,8 +1,7 @@
-import java.lang.reflect.Array;
 import java.util.*;
 import java.io.*;
 
-public class 멀티버스_2 {
+public class 멀티버스_2_18869 {
     private static int M, N;
     private static List<Integer>[] universe;
 
